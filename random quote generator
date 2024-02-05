@@ -1,0 +1,17 @@
+import random
+def reading_quote(filename):
+    quotes=[]
+    with open(filename,"r")as fh:
+        for line in fh:
+            quote=line.strip()
+            quotes.append(quote)
+    return quotes
+def get_quotes(quotes):
+    return random.choice(quotes)
+def display(quote):
+    print(quote)
+
+filename="quote.txt"
+quotes=reading_quote(filename)
+randomquote=get_quotes(quotes)
+display(randomquote)
